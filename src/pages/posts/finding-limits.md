@@ -36,7 +36,7 @@ $$f(x) = x+1, x \neq 7$$
 
 </AstroKatex>
 
-![graphs](/demo-astro-katex/f-g-functions.png)
+![graphs](/demo-astro-katex/f-g-functions.PNG)
 
 
 <AstroKatex is:raw>
