@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css">
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- Primary Meta Tags -->
+<title>Finding Limits - Properties of Limits</title>
+<meta name="title" content="Finding Limits - Properties of Limits">
+<meta name="description" content="Just an introduction to Calculus">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url">
+<meta property="og:title" content="Finding Limits - Properties of Limits">
+<meta property="og:description" content="Just an introduction to Calculus">
+<meta property="og:image" content="https://astro.build/social.png?v=1">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url">
+<meta property="twitter:title" content="Finding Limits - Properties of Limits">
+<meta property="twitter:description" content="Just an introduction to Calculus">
+<meta property="twitter:image" content="https://astro.build/social.png?v=1">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+	<link rel="stylesheet" href="/assets/asset.067ca522.css"></link><script type="module" src="/entry.53c6a2c44.js"></script>
+</head>
+
+	<body>
+		<header class="wrapper astro-KVG3THYU">
+	<article class="astro-KVG3THYU">
+		<h1 class="astro-KVG3THYU">
+			<a href="/" class="astro-KVG3THYU">
+				<svg class="logo astro-KVG3THYU" width="32" height="32" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<style>
+						#flame {
+							fill: #ff5d01;
+						}
+						#a {
+							fill: #000014;
+						}
+					</style>
+					<title>Logo</title>
+					<path id="a" fill-rule="evenodd" clip-rule="evenodd" d="M163.008 18.929c1.944 2.413 2.935 5.67 4.917 12.181l43.309 142.27a180.277 180.277 0 00-51.778-17.53l-28.198-95.29a3.67 3.67 0 00-7.042.01l-27.857 95.232a180.225 180.225 0 00-52.01 17.557l43.52-142.281c1.99-6.502 2.983-9.752 4.927-12.16a15.999 15.999 0 016.484-4.798c2.872-1.154 6.271-1.154 13.07-1.154h31.085c6.807 0 10.211 0 13.086 1.157a16.004 16.004 0 016.487 4.806z" class="astro-KVG3THYU"></path>
+					<path id="flame" fill-rule="evenodd" clip-rule="evenodd" d="M168.19 180.151c-7.139 6.105-21.39 10.268-37.804 10.268-20.147 0-37.033-6.272-41.513-14.707-1.602 4.835-1.961 10.367-1.961 13.902 0 0-1.056 17.355 11.015 29.426 0-6.268 5.081-11.349 11.349-11.349 10.743 0 10.731 9.373 10.721 16.977v.679c0 11.542 7.054 21.436 17.086 25.606a23.27 23.27 0 01-2.339-10.2c0-11.008 6.463-15.107 13.974-19.87 5.976-3.79 12.616-8.001 17.192-16.449a31.024 31.024 0 003.743-14.82c0-3.299-.513-6.479-1.463-9.463z" class="astro-KVG3THYU"></path>
+				</svg>
+				<span class="astro-KVG3THYU">DEMO</span>
+			</a>
+		</h1>
+	</article>
+</header>
+
+
+
+		<div class="wrapper">
+			<div class="layout astro-HWULPNJG">
+	<article class="content astro-HWULPNJG">
+		<div class="astro-HWULPNJG">
+			<header class="astro-HWULPNJG">
+				
+				<p class="publish-date astro-HWULPNJG">23 May 2022</p>
+    			  <h1 class="title astro-HWULPNJG">Finding Limits - Properties of Limits</h1>
+				<div class="author astro-KO5QTRDP">
+	<p class="astro-KO5QTRDP"><a href="https://twitter.com/FredKSchott" class="astro-KO5QTRDP">@FredKSchott</a></p>
+</div>
+
+
+
+			</header>
+			<main class="astro-HWULPNJG">
+				<div class="author astro-KO5QTRDP">
+	<p class="astro-KO5QTRDP"><a href="#" class="astro-KO5QTRDP">Victor Souza</a></p>
+</div>
+
+
+<h1 id="finding-limits---properties-of-limits">Finding Limits - Properties of Limits</h1><div class="astro-katex">
+    
+<p>Consider the rational function</p>
+<p>$$ f(x) = \frac{x^2-6x-7}{x-7} $$</p>
+<p>The function can be factored as follows:</p>
+<p>$$f(x) = \frac{\cancel{(x-7)}(x+1)}{\cancel{(x-7)}}$$</p>
+<p>which gives us</p>
+<p>$$f(x) = x+1, x \neq 7$$</p>
+<p>Does this mean the function  \(f(x)\)  is the same as the function  \(g(x)=x+1\)?</p>
+<p>The answer is no. Function \(f(x)\)  does not have  \(x=7\) in its domain, but  \(g(x)\)  does. Graphically, we observe there is a hole in the graph of  \(f(x)\)  at  \(x=7\) , as shown in Figure A (left) and no such hole in the graph of \(g(x)\) , as shown in Figure B (Right).</p>
+
+</div>
+<p><img src="/f-g-functions.png" alt="graphs"></p><div class="astro-katex">
+    
+  So, do these two different functions also have different limits as  \(x\)  approaches \(7\)? Not necessarily. Remember, in determining a limit of a function as  \(x\)  approaches  a , what matters is whether the output approaches a real number as we get close to  \(x=a\) . The existence of a limit does not depend on what happens when  \(x\)  equals  \(a\) .
+
+</div>
+<div class="astro-katex">
+    
+  Look again at \(\textbf{Figure A} \) and \(\textbf{Figure B}\). Notice that in both graphs, as  \(x\)  approaches \(7\), the output values approach \(8\). This means
+  \[
+    \lim_{x \to 7} f(x) = \lim_{x \to 7} g(x)
+  \]
+
+</div>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="bold">End...</mtext></mrow><annotation encoding="application/x-tex">
+ \textbf{End...}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord textbf">End...</span></span></span></span></span>
+
+			</main>
+		</div>
+	</article>
+</div>
+
+
+
+		</div>
+	</body></html>
