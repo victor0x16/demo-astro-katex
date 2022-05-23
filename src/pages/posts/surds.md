@@ -30,7 +30,7 @@ Some numbers cannot be written as exact decimals or fractions for example:
 <p>This square has an area of \(3m^2\). Calculate the length of each side.</p>
 <AstroKatex>
 
-![Square](/square.png)
+![Square](/demo-astro-katex/square.png)
 
 <AstroKatex is:raw>
 <p>The length of each side is \(\sqrt{3}\). This answer is in surd form.</p>
