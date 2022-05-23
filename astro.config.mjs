@@ -8,6 +8,6 @@ import react from "@astrojs/react";
 export default defineConfig({
   /// development | production
   integrations: [preact(), katex(), react()],
-  site: 'https://victor0x16.github.io/',
-  base: 'demo-astro-katex'
+ // site: 'https://victor0x16.github.io/',
+ // base: 'demo-astro-katex'
 });

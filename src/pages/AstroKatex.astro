@@ -1,5 +1,8 @@
 ---
+const thereIs = Astro.slots.default;
+
+//console.log(thereIs)
 ---
 <div class="astro-katex">
-    <slot />
+    {thereIs ? <slot /> : '\\(\\Err0r{Something did not work}\\)'}
 </div>
